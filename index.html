@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaudelet Cliff Espaces Verts — Élagueur Paysagiste Pouilly-sur-Loire (58)</title>
+  <meta name="description" content="Gaudelet Cliff Espaces Verts, élagueur paysagiste à Pouilly-sur-Loire (58) et Digoin (71). Élagage, abattage, taille de haies, entretien jardins. Devis gratuit.">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <meta property="og:title" content="Gaudelet Cliff Espaces Verts — Élagueur Paysagiste">
+  <meta property="og:description" content="Élagage, abattage, taille de haies, entretien de jardins. Pouilly-sur-Loire et Digoin.">
+  <meta property="og:image" content="img/elagage1.jpg">
+  <meta property="og:type" content="website">
+  <!--
+    DA : Vert #4a7c2e (logo) + Vert foncé #2d5016 + Vert clair #7cb342
+    Références sectorielles : Paysagiste — sans-serifs naturelles, touche organique, photos réalisations avant/après
+    Fonts : Nunito Sans (titres, arrondi naturel) + Inter (corps)
+    Assets : logo réel, 5 photos chantier réelles (haie, élagage, lierre), before/after laurier
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --vert: #4a7c2e;
+      --vert-fonce: #2d5016;
+      --vert-clair: #7cb342;
+      --vert-pale: #e8f5e9;
+      --brun: #5d4037;
+      --gris-fonce: #2e2e2e;
+      --gris: #666666;
+      --gris-clair: #f7f7f4;
+      --blanc: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gris-fonce);
+      line-height: 1.6;
+      background: var(--blanc);
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--blanc);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo { height: 56px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.9rem; font-weight: 700; color: var(--gris-fonce);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--vert); }
+    .nav-cta {
+      background: var(--vert); color: var(--blanc) !important;
+      padding: 10px 22px; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 700;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--vert-fonce); }
+    .nav-burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-burger span { display: block; width: 26px; height: 3px; background: var(--gris-fonce); border-radius: 2px; transition: 0.3s; }
+
+    /* HERO */
+    .hero {
+      margin-top: 72px;
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+      display: flex; align-items: center;
+    }
+    .hero-bg {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: url('img/elagage1.jpg') center/cover;
+    }
+    .hero-overlay {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(45,80,22,0.88) 0%, rgba(74,124,46,0.75) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 700px; padding: 80px 24px;
+      color: var(--blanc);
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+    .hero h1 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 2.8rem; font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      font-size: 1.05rem; color: rgba(255,255,255,0.9);
+      margin-bottom: 30px; line-height: 1.7;
+      max-width: 550px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--blanc); color: var(--vert-fonce);
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.95rem; font-weight: 800;
+      padding: 14px 32px; border-radius: 50px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--blanc);
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.95rem; font-weight: 700;
+      padding: 14px 24px; border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.4);
+      transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--blanc); }
+    .btn-secondary svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* CONTAINER */
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 2.2rem; font-weight: 900;
+      color: var(--gris-fonce);
+      margin-bottom: 12px;
+    }
+    .section-title .accent { color: var(--vert); }
+    .section-sub { font-size: 0.95rem; color: var(--gris); max-width: 550px; margin-bottom: 45px; }
+
+    /* SERVICES */
+    .services { padding: 80px 24px; background: var(--blanc); }
+    .srv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .srv-card {
+      background: var(--gris-clair);
+      border-radius: 16px;
+      padding: 32px 24px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-left: 4px solid transparent;
+    }
+    .srv-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      border-left-color: var(--vert);
+    }
+    .srv-icon { width: 48px; height: 48px; fill: var(--vert); margin-bottom: 16px; }
+    .srv-card h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.15rem; font-weight: 800;
+      color: var(--gris-fonce);
+      margin-bottom: 8px;
+    }
+    .srv-card p { font-size: 0.88rem; color: var(--gris); line-height: 1.7; }
+
+    /* AVANT/APRES */
+    .avant-apres { padding: 80px 24px; background: var(--vert-pale); }
+    .aa-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 30px; margin-top: 45px;
+    }
+    .aa-pair {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .aa-img { position: relative; }
+    .aa-img img { width: 100%; height: 220px; object-fit: cover; }
+    .aa-label {
+      position: absolute; bottom: 8px; left: 8px;
+      background: rgba(0,0,0,0.6);
+      color: var(--blanc);
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.72rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 50px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    /* EXPERTISE */
+    .expertise { padding: 80px 24px; background: var(--blanc); }
+    .exp-content {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 50px; align-items: center;
+    }
+    .exp-text h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.5rem; font-weight: 800;
+      color: var(--gris-fonce);
+      margin-bottom: 16px;
+    }
+    .exp-text p { font-size: 0.92rem; color: var(--gris); margin-bottom: 14px; line-height: 1.7; }
+    .exp-stats { display: flex; gap: 30px; margin-top: 24px; }
+    .exp-stat {
+      text-align: center;
+    }
+    .exp-stat .num {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 2rem; font-weight: 900;
+      color: var(--vert);
+    }
+    .exp-stat .label { font-size: 0.78rem; color: var(--gris); margin-top: 2px; }
+    .exp-img {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .exp-img img { width: 100%; height: 380px; object-fit: cover; }
+
+    /* CONTACT */
+    .contact {
+      padding: 80px 24px;
+      background: var(--vert-fonce);
+      color: var(--blanc);
+    }
+    .contact .section-title { color: var(--blanc); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 50px; margin-top: 45px;
+    }
+    .contact-info h3 {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1.2rem; font-weight: 800;
+      margin-bottom: 20px; color: var(--vert-clair);
+    }
+    .contact-item {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 16px;
+    }
+    .contact-item svg { width: 22px; height: 22px; fill: var(--vert-clair); flex-shrink: 0; }
+    .contact-item a, .contact-item span {
+      font-size: 0.95rem; color: rgba(255,255,255,0.9);
+      transition: color 0.2s;
+    }
+    .contact-item a:hover { color: var(--vert-clair); }
+    .contact-map {
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .contact-map iframe { width: 100%; height: 300px; border: 0; }
+    .contact-cta {
+      display: inline-block; margin-top: 24px;
+      background: var(--vert-clair); color: var(--vert-fonce);
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 0.95rem; font-weight: 800;
+      padding: 14px 32px; border-radius: 50px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .contact-cta:hover { background: var(--blanc); transform: translateY(-2px); }
+
+    /* FOOTER */
+    .footer {
+      padding: 24px;
+      background: #1a3a0e;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--blanc); padding: 20px; gap: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+      .nav-links.open { display: flex; }
+      .nav-burger { display: flex; }
+      .hero { min-height: 420px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-content { padding: 50px 20px; }
+      .hero-btns { flex-direction: column; }
+      .srv-grid { grid-template-columns: 1fr; }
+      .aa-grid { grid-template-columns: 1fr; }
+      .aa-img img { height: 160px; }
+      .exp-content { grid-template-columns: 1fr; }
+      .exp-img { order: -1; }
+      .exp-img img { height: 250px; }
+      .exp-stats { gap: 20px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#"><img src="img/logo.png" alt="Gaudelet Cliff Espaces Verts" class="nav-logo"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#expertise">L'entreprise</a>
+      <a href="#contact" class="nav-cta">Devis gratuit</a>
+    </div>
+    <div class="nav-burger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Élagueur Paysagiste — Nièvre (58) &amp; Saône-et-Loire (71)</div>
+      <h1>Votre spécialiste élagage et entretien d'espaces verts</h1>
+      <p>Entreprise familiale de père en fils, nous intervenons dans la Nièvre et la Saône-et-Loire pour tous vos travaux d'élagage, d'abattage et d'entretien de jardins.</p>
+      <div class="hero-btns">
+        <a href="mailto:cliff.gaudelet@gmail.com" class="btn-primary">Demander un devis gratuit</a>
+        <a href="tel:0386391670" class="btn-secondary">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+          03 86 39 16 70
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Nos <span class="accent">prestations</span></h2>
+      <p class="section-sub">Une équipe jeune et dynamique d'élagueurs paysagistes à votre service pour tous vos travaux d'espaces verts.</p>
+      <div class="srv-grid">
+        <div class="srv-card">
+          <svg class="srv-icon" viewBox="0 0 48 48"><path d="M24 4c-6 0-11 8-11 18s5 18 11 18 11-8 11-18S30 4 24 4zm0 32c-4 0-7-6-7-14s3-14 7-14 7 6 7 14-3 14-7 14z"/><path d="M24 40v4M12 24H4M44 24h-8"/></svg>
+          <h3>Élagage &amp; Taille douce</h3>
+          <p>Taille raisonnée et élagage délicat de vos arbres. Intervention en zone difficile et à risque, y compris à la nacelle élévatrice.</p>
+        </div>
+        <div class="srv-card">
+          <svg class="srv-icon" viewBox="0 0 48 48"><path d="M24 2L22 12l-8-6 4 9-10-1 8 6-9 3 10 1-6 8 9-4-1 10 6-8 3 9 1-10 8 6-4-9 10 1-8-6 9-3-10-1 6-8-9 4 1-10-6 8z"/></svg>
+          <h3>Abattage d'arbres</h3>
+          <p>Abattage contrôlé et démontage d'arbres dangereux ou encombrants. Évacuation complète des déchets avec camions-bennes.</p>
+        </div>
+        <div class="srv-card">
+          <svg class="srv-icon" viewBox="0 0 48 48"><path d="M4 36h40v4H4zM8 24h4v12H8zM16 20h4v16h-4zM24 16h4v20h-4zM32 20h4v16h-4zM40 24h4v12h-4z"/></svg>
+          <h3>Taille de haies</h3>
+          <p>Taille et rabattage de haies : thuyas, cyprès, charme, laurier. Entretien régulier ou remise en forme complète.</p>
+        </div>
+        <div class="srv-card">
+          <svg class="srv-icon" viewBox="0 0 48 48"><path d="M24 4v8M10 10l6 6M4 24h8M10 38l6-6M38 10l-6 6M44 24h-8M38 38l-6-6M24 36v8"/><circle cx="24" cy="24" r="8"/></svg>
+          <h3>Étêtage &amp; Écimage</h3>
+          <p>Réduction de la hauteur de vos arbres pour les rendre conformes aux réglementations ou sécuriser votre propriété.</p>
+        </div>
+        <div class="srv-card">
+          <svg class="srv-icon" viewBox="0 0 48 48"><path d="M6 42l8-18 8 10 8-14 12 22H6z"/><circle cx="36" cy="10" r="4"/></svg>
+          <h3>Entretien de jardins</h3>
+          <p>Entretien complet de parcs et jardins : tonte, débroussaillage, défrichage. Pour les particuliers et les professionnels.</p>
+        </div>
+        <div class="srv-card">
+          <svg class="srv-icon" viewBox="0 0 48 48"><path d="M24 4l-4 12h-12l10 7-4 12 10-7 10 7-4-12 10-7h-12z"/></svg>
+          <h3>Échenillage</h3>
+          <p>Traitement et suppression des nids de chenilles processionnaires. Protection de vos arbres et de votre environnement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANT/APRES -->
+  <section class="avant-apres" id="realisations">
+    <div class="container">
+      <h2 class="section-title">Nos <span class="accent">réalisations</span></h2>
+      <p class="section-sub">Quelques exemples de nos interventions en Nièvre et Saône-et-Loire. Résultats visibles, travail soigné.</p>
+      <div class="aa-grid">
+        <div class="aa-pair">
+          <div class="aa-img">
+            <img src="img/avant1.jpg" alt="Haie de cyprès avant taille — La Charité-sur-Loire">
+            <span class="aa-label">Avant</span>
+          </div>
+          <div class="aa-img">
+            <img src="img/apres1.jpg" alt="Haie de cyprès après taille — La Charité-sur-Loire">
+            <span class="aa-label">Après</span>
+          </div>
+        </div>
+        <div class="aa-pair">
+          <div class="aa-img">
+            <img src="img/avant-laurier.jpg" alt="Laurier sauce avant taille — Sévry (18)">
+            <span class="aa-label">Avant</span>
+          </div>
+          <div class="aa-img">
+            <img src="img/apres-laurier.jpg" alt="Laurier sauce après taille — Sévry (18)">
+            <span class="aa-label">Après</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="expertise" id="expertise">
+    <div class="container">
+      <div class="exp-content">
+        <div class="exp-text">
+          <h2 class="section-title">Une entreprise <span class="accent">familiale</span></h2>
+          <p>Gaudelet Cliff Espaces Verts est une entreprise familiale de père en fils, basée à <strong>Pouilly-sur-Loire (Nièvre)</strong> et <strong>Digoin (Saône-et-Loire)</strong>.</p>
+          <p>Composée d'une équipe jeune et dynamique, nous mettons notre savoir-faire et nos connaissances à votre service. Nous sommes expérimentés dans l'élagage en zone difficile et à risque.</p>
+          <p>Particuliers et professionnels : nous vous offrons un service personnalisé, alliant expertise et conseils adaptés à chaque situation.</p>
+          <div class="exp-stats">
+            <div class="exp-stat">
+              <div class="num">2</div>
+              <div class="label">Agences</div>
+            </div>
+            <div class="exp-stat">
+              <div class="num">58 &amp; 71</div>
+              <div class="label">Départements</div>
+            </div>
+            <div class="exp-stat">
+              <div class="num">100%</div>
+              <div class="label">Évacuation</div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-img">
+          <img src="img/lierre1.jpg" alt="Taille de lierre sur pignon — Suilly-la-Tour (58)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contactez-<span class="accent" style="color:var(--vert-clair)">nous</span></h2>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info">
+            <h3>Agence Pouilly-sur-Loire (58)</h3>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+              <a href="tel:0386391670">03 86 39 16 70</a>
+            </div>
+          </div>
+          <div class="contact-info" style="margin-top:28px">
+            <h3>Agence Digoin (71)</h3>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+              <a href="tel:0358426172">03 58 42 61 72</a>
+            </div>
+          </div>
+          <div class="contact-info" style="margin-top:28px">
+            <h3>Email</h3>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <a href="mailto:cliff.gaudelet@gmail.com">cliff.gaudelet@gmail.com</a>
+            </div>
+          </div>
+          <a href="mailto:cliff.gaudelet@gmail.com" class="contact-cta">Demander un devis gratuit</a>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=2.9%2C47.2%2C3.1%2C47.35&layer=mapnik&marker=47.2833%2C2.9556" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Gaudelet Cliff Espaces Verts — Élagueur Paysagiste. Pouilly-sur-Loire (58) &amp; Digoin (71).</p>
+  </footer>
+
+</body>
+</html>
